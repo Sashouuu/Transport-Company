@@ -1,9 +1,3 @@
-CREATE DATABASE IF NOT EXISTS transport_company
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
-USE transport_company;
-
 CREATE TABLE IF NOT EXISTS companies (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -46,12 +40,7 @@ CREATE TABLE IF NOT EXISTS transports (
     driver_id INT NOT NULL,
     vehicle_id INT NOT NULL,
 
-    CONSTRAINT fk_transport_client
-        FOREIGN KEY (client_id) REFERENCES clients(id),
-
-    CONSTRAINT fk_transport_driver
-        FOREIGN KEY (driver_id) REFERENCES employees(id),
-
-    CONSTRAINT fk_transport_vehicle
-        FOREIGN KEY (vehicle_id) REFERENCES vehicles(id)
+    FOREIGN KEY (client_id) REFERENCES clients(id),
+    FOREIGN KEY (driver_id) REFERENCES employees(id),
+    FOREIGN KEY (vehicle_id) REFERENCES vehicles(id)
 ) ENGINE=InnoDB;
