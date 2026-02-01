@@ -18,7 +18,7 @@ public class DBConnection {
             "jdbc:mysql://localhost:3306/transport_company?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 
     private static final String USER = "root";       // смени ако е нужно
-    private static final String PASSWORD = "Pewguin$123"; // смени ако е нужно
+    private static final String PASSWORD = "admin$123"; // смени ако е нужно
 
     private DBConnection() {}
 
