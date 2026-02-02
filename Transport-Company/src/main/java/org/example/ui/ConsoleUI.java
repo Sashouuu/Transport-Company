@@ -37,13 +37,12 @@ public class ConsoleUI {
             int choice = readInt();
 
             switch (choice) {
-                case 1 -> System.out.println("Companies UI: ще го добавим след малко (CRUD).");
-                case 2 -> clientsMenu();
-                case 3 -> driversMenu();
-                case 4 -> vehiclesMenu();
+                case 1 -> clientsMenu();
+                case 2 -> driversMenu();
+                case 3 -> vehiclesMenu();
 
-                case 5 -> transportsMenu();
-                case 6 -> reportsMenu();
+                case 4 -> transportsMenu();
+                case 5 -> reportsMenu();
                 case 0 -> {
                     System.out.println("Bye!");
                     return;
